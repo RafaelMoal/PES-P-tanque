@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8854600051776483305}
+  - component: {fileID: 1116444557521620800}
   - component: {fileID: 3909948545717072659}
   - component: {fileID: 7731535040173754220}
   - component: {fileID: 8646682959488865699}
@@ -37,6 +38,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1116444557521620800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268454497722067145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e74e207413c74469285add88b52e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &3909948545717072659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,8 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b687c1432a02544fa9bc6f56aed5bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _BallManager: {fileID: 1116444557521620800}
   _Gravity: -9.81
   _Mass: 10
+  GroundFriction: 0.2
   _RaycastDistance: 3.1
   _GroundLayer:
     serializedVersion: 2
@@ -67,6 +83,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d065fa3186fc429449f269c7871d18c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _BallManager: {fileID: 1116444557521620800}
+  _ThrowForce: 5
+  _BallRotationY: 0
+  Velocity: {x: 0, y: 0, z: 0}
+  GroundFriction: 1
 --- !u!33 &8646682959488865699
 MeshFilter:
   m_ObjectHideFlags: 0
