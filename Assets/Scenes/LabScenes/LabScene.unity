@@ -454,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3909948545717072659, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: GroundFrictionDecrement
-      value: 0.001
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 6268454497722067145, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: m_Name
@@ -462,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731535040173754220, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: _ThrowForce
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7731535040173754220, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: _RotationSpeed

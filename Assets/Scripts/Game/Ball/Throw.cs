@@ -28,7 +28,7 @@ public class Throw : MonoBehaviour
 
     private void InputControl()
     {
-        //if (!_BallManager.Throwned) return ;
+        if (_BallManager.Throwned) return ;
 
         _BallRotationY += Input.GetAxis(X_INPUT) * _RotationSpeed * Time.deltaTime;
         _BallRotationX += Input.GetAxis(Y_INPUT) * _RotationSpeed * Time.deltaTime;
