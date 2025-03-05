@@ -21,7 +21,8 @@ public class BallGravity : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (!_BallManager.Throwned) return;
+
         Debug.DrawRay(transform.position, Vector3.down * _RaycastDistance, Color.black);
         if (Physics.Raycast(transform.position, Vector3.down, out _Hit, _RaycastDistance, _GroundLayer))
         {
@@ -38,6 +39,7 @@ public class BallGravity : MonoBehaviour
         }
 
         _BallManager.Velocity.z *= GroundFriction;
+        _BallManager.Velocity.x *= GroundFriction;
     }
 
     
