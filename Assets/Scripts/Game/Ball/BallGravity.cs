@@ -5,8 +5,11 @@ using UnityEngine;
 public class BallGravity : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private Throw _Throw;
+
     [SerializeField] private float _Gravity = -9.81f;
     [SerializeField] private float _Mass = 10f;
+    [SerializeField] private float GroundFriction = 0.2f;
     [SerializeField] private float _RaycastDistance = 3.1f;
     [SerializeField] private LayerMask _GroundLayer;
 
@@ -20,6 +23,7 @@ public class BallGravity : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down, out _Hit, _RaycastDistance, _GroundLayer))
         {
             _FallForce = 0f;
+            _Throw.Velocity.z *= GroundFriction;
             transform.position = new Vector3(transform.position.x, _Hit.point.y + transform.localScale.y / 2, transform.position.z);
         }
         else
