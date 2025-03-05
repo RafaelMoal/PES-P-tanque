@@ -5,8 +5,10 @@ using UnityEngine;
 public class Throw : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Space(10), Header("Gameobjects")]
     [SerializeField] private BallManager _BallManager;
 
+    [Space(10), Header("Parameters")]
     [SerializeField] private float _ThrowForce = 5f;
     [SerializeField] private float _BallRotationY = 0f;
     [SerializeField] private float _BallRotationX = 0f;
@@ -26,15 +28,18 @@ public class Throw : MonoBehaviour
 
     private void InputControl()
     {
+        //if (!_BallManager.Throwned) return ;
+
         _BallRotationY += Input.GetAxis(X_INPUT) * _RotationSpeed * Time.deltaTime;
         _BallRotationX += Input.GetAxis(Y_INPUT) * _RotationSpeed * Time.deltaTime;
 
         transform.rotation = Quaternion.Euler(_BallRotationX, _BallRotationY, 0);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space))
         {
             _BallManager.Velocity = transform.forward * _ThrowForce;
             _BallManager.Throwned = true;
+
         }
     }
 }

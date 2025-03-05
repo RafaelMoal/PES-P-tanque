@@ -5,13 +5,16 @@ using UnityEngine;
 public class BallGravity : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Space(10), Header("Gameobjects")]
     [SerializeField] private BallManager _BallManager;
 
+    [Space(10), Header("Parameters")]
     [SerializeField] private float _Gravity = -9.81f;
     [SerializeField] private float _Mass = 10f;
     [SerializeField] private float GroundFriction = 1f;
     [SerializeField] private float GroundFrictionDecrement = 0.01f;
 
+    [Space(10), Header("Raycast")]
     [SerializeField] private float _RaycastDistance = 3.1f;
     [SerializeField] private LayerMask _GroundLayer;
 
