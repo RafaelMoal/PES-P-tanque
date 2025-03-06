@@ -29,6 +29,15 @@ public class BallCollision : MonoBehaviour
     void FixedUpdate()
     {
         RaycastCollision();
+
+        if (_BallManager.Throwned && _BallManager.Velocity == Vector3.zero)
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            GetComponent<Rigidbody>().useGravity = true;
+            enabled = false;
+            GetComponent<Throw>().enabled = false;
+            GetComponent<BallGravity>().enabled = false;
+        }
     }
 
     private void RaycastCollision()
