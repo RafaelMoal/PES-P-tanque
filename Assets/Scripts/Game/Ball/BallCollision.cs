@@ -37,6 +37,9 @@ public class BallCollision : MonoBehaviour
             enabled = false;
             GetComponent<Throw>().enabled = false;
             GetComponent<BallGravity>().enabled = false;
+            
+
+            EventBank.OnThrowFinished.Invoke();
         }
     }
 

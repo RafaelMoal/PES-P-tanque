@@ -31,7 +31,11 @@ public class Aiming : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (_BallManager.Throwned) enabled = false;       
+        if (_BallManager.Throwned)
+        {
+            enabled = false;
+            GetComponent<LineRenderer>().enabled = false;
+        }
         DrawTrajectory();
     }
 
