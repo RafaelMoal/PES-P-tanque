@@ -29,9 +29,9 @@ public class Aiming : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //if (_BallManager.Throwned) return;       
+        if (_BallManager.Throwned) return;       
         DrawTrajectory();
     }
 
@@ -40,8 +40,6 @@ public class Aiming : MonoBehaviour
         _TrajectoryPoints = new Vector3[_MaxSteps];
         _StartPosition = transform.position;
         _StartVelocity = transform.forward * _Throw.ThrowForce;
-
-        Debug.Log(_BallManager.Velocity + " - " + _StartVelocity);
 
         for (int i = 0; i < _MaxSteps; i++)
         {
