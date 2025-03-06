@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 1116444557521620800}
   - component: {fileID: 3909948545717072659}
   - component: {fileID: 7731535040173754220}
+  - component: {fileID: 6462206105781722110}
   - component: {fileID: 8646682959488865699}
   - component: {fileID: 7495619822582169630}
   - component: {fileID: 6365276347970521658}
@@ -194,6 +195,23 @@ MonoBehaviour:
   _BallManager: {fileID: 1116444557521620800}
   _ThrowForce: 5
   _BallRotationY: 0
+  _BallRotationX: 0
+  _RotationSpeed: 20
+--- !u!114 &6462206105781722110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268454497722067145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5537160f89db24a923548061a9c111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _BallManager: {fileID: 1116444557521620800}
+  _Throw: {fileID: 7731535040173754220}
+  _BallGravity: {fileID: 3909948545717072659}
 --- !u!33 &8646682959488865699
 MeshFilter:
   m_ObjectHideFlags: 0
