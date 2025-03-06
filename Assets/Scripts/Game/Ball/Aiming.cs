@@ -48,7 +48,8 @@ public class Aiming : MonoBehaviour
             _Time = i * _TimeSteps;
             
             _Point = _StartPosition + _StartVelocity * _Time;
-            _Point.y = _BallGravity.Gravity * _BallGravity.Mass * Mathf.Pow(_Time, 2) / 2 + _StartVelocity.y * Mathf.Sin(transform.rotation.x) + _StartPosition.y;
+            _Point.y = _StartPosition.y + _StartVelocity.y * _Time + _BallGravity.Gravity * _BallGravity.Mass * Mathf.Pow(_Time, 2) / 2;
+            
 
             _TrajectoryPoints[i] = _Point;
 
