@@ -9,8 +9,8 @@ public class BallGravity : MonoBehaviour
     [SerializeField] private BallManager _BallManager;
 
     [Space(10), Header("Parameters")]
-    [SerializeField] private float _Gravity = -9.81f;
-    [SerializeField] private float _Mass = 10f;
+    [SerializeField] public float Gravity = -9.81f;
+    [SerializeField] public float Mass = 10f;
     [SerializeField] private float GroundFriction = 1f;
     [SerializeField] private float GroundFrictionDecrement = 0.01f;
 
@@ -37,7 +37,7 @@ public class BallGravity : MonoBehaviour
         }
         else
         {
-            _FallForce += _Gravity * _Mass * Time.deltaTime;
+            _FallForce += Gravity * Mass * Time.deltaTime;
             transform.position += Vector3.up * _FallForce * Time.deltaTime;
         }
 

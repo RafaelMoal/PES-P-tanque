@@ -9,7 +9,7 @@ public class Throw : MonoBehaviour
     [SerializeField] private BallManager _BallManager;
 
     [Space(10), Header("Parameters")]
-    [SerializeField] private float _ThrowForce = 5f;
+    [SerializeField] public float ThrowForce = 5f;
     [SerializeField] private float _BallRotationY = 0f;
     [SerializeField] private float _BallRotationX = 0f;
     [SerializeField] private float _RotationSpeed = 20;
@@ -37,7 +37,8 @@ public class Throw : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Space))
         {
-            _BallManager.Velocity = transform.forward * _ThrowForce;
+            _BallManager.Velocity = transform.forward * ThrowForce;
+            
             _BallManager.Throwned = true;
 
         }
