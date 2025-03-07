@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 7495619822582169630, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 024c108406ea4ce4b9efce3b196fe219, type: 2}
+      objectReference: {fileID: 2100000, guid: 774d1e04ac7ccaf468e76594fe2ade06, type: 2}
     - target: {fileID: 8854600051776483305, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -101,3 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0862838654be9474888d24e7c67778a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _BallSpawner: {fileID: 0}
+  _Coeff: 100
+  FinalScore: 0
