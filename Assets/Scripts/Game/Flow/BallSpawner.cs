@@ -8,7 +8,8 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private GameObject _Ball;
     [SerializeField] private GameObject _Cochonnet;
 
-    
+    [SerializeField] public int BallsNumber = 3;
+    public int BallsCount = 0;
     void Start()
     {
         EventBank.OnThrowFinished.AddListener(SpawnNewBall);
@@ -31,7 +32,13 @@ public class BallSpawner : MonoBehaviour
     }
     private void SpawnNewBall()
     {
-        Instantiate(_Ball, transform);
+        if (BallsCount > BallsNumber - 1)
+        {
+            EventBank.OnGameFinished.Invoke();
+            return;
+        }
+        Instantiate(_Ball, transform); 
+        BallsCount++;
     }
 
     private void OnDisable()

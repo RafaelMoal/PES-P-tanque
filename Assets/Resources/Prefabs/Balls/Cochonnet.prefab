@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2332620042575744389, guid: 0071364a44cf39441980ef58ea755490, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909948545717072659, guid: 0071364a44cf39441980ef58ea755490, type: 3}
+      propertyPath: Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6268454497722067145, guid: 0071364a44cf39441980ef58ea755490, type: 3}
       propertyPath: m_Name
       value: Cochonnet
@@ -71,5 +79,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6268454497722067145, guid: 0071364a44cf39441980ef58ea755490, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8979138631209492912}
   m_SourcePrefab: {fileID: 100100000, guid: 0071364a44cf39441980ef58ea755490, type: 3}
+--- !u!1 &5810911419640071755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6268454497722067145, guid: 0071364a44cf39441980ef58ea755490, type: 3}
+  m_PrefabInstance: {fileID: 457826752232959618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8979138631209492912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5810911419640071755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0862838654be9474888d24e7c67778a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
