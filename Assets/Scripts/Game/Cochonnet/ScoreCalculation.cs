@@ -24,6 +24,6 @@ public class ScoreCalculation : MonoBehaviour
             FinalScore += _Coeff / lDistance;
         }
 
-        Debug.Log(Mathf.RoundToInt(FinalScore));
+        EventBank.OnScoreCalculated.Invoke(Mathf.RoundToInt(FinalScore));
     }
 }

@@ -226,7 +226,7 @@ MonoBehaviour:
   _BallManager: {fileID: 1116444557521620800}
   _Throw: {fileID: 7731535040173754220}
   _BallGravity: {fileID: 3909948545717072659}
-  _MaxSteps: 30
+  _MaxSteps: 15
   _TimeSteps: 0.1
   _GroundLayer:
     serializedVersion: 2
