@@ -32,6 +32,10 @@ public class Throw : MonoBehaviour
 
         _BallRotationY += Input.GetAxis(X_INPUT) * _RotationSpeed * Time.deltaTime;
         _BallRotationX += Input.GetAxis(Y_INPUT) * _RotationSpeed * Time.deltaTime;
+        _BallRotationX = Mathf.Clamp(_BallRotationX, -40f, -25f);
+
+        ThrowForce += Input.GetAxis(Y_INPUT);
+        ThrowForce = Mathf.Clamp(ThrowForce, 20f, 100f);
 
         transform.rotation = Quaternion.Euler(_BallRotationX, _BallRotationY, 0);
 

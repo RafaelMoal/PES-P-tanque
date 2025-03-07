@@ -5,7 +5,8 @@ using UnityEngine;
 public class BallSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject _BallFactory;
+    [SerializeField] private GameObject _Ball;
+    [SerializeField] private GameObject _Cochonnet;
 
     
     void Start()
@@ -14,7 +15,7 @@ public class BallSpawner : MonoBehaviour
 
         if (transform.childCount < 1)
         {
-            SpawnNewBall();
+            SpawnCochonnet();
         }
     }
 
@@ -24,9 +25,13 @@ public class BallSpawner : MonoBehaviour
         
     }
 
+    private void SpawnCochonnet()
+    {
+        Instantiate(_Cochonnet, transform);
+    }
     private void SpawnNewBall()
     {
-        Instantiate(_BallFactory, transform);
+        Instantiate(_Ball, transform);
     }
 
     private void OnDisable()
